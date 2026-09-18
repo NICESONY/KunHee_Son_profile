@@ -21,7 +21,7 @@ def records(heading):
     return result
 
 profile = {
-    "name": "Kun-Hee Son",
+    "name": "KunHee Son",
     "department": "School of Artificial Intelligence",
     "affiliation": "Kongju National University",
     "email": "songunhee5426@gmail.com",
@@ -57,7 +57,8 @@ profile["unavailable_links"] = [item["url"] for item in json.loads(link_checks.r
 existing_path = ROOT / "_data/profile.json"
 if existing_path.is_file():
     existing = json.loads(existing_path.read_text(encoding="utf-8"))
-    for key in ["cv", "google_scholar"]:
-        profile[key] = existing.get(key, "")
+    for key in ["cv", "google_scholar", "name"]:
+        profile[key] = existing.get(key, profile.get(key, ""))
+profile["about"] = profile["about"].replace("Kun-Hee Son", profile["name"])
 (ROOT / "_data/profile.json").write_text(json.dumps(profile, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print("Imported profile and all source records.")

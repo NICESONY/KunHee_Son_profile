@@ -6,7 +6,7 @@ layout: homepage
 
 <section id="about" class="content-section" aria-labelledby="about-title">
 <h2 id="about-title">About Me</h2>
-<p class="intro">Hello! I am Kun-Hee Son, a fourth-year student at National Kongju University. I am interested in the field of Multi-Model. I particularly enjoy working on exciting projects that involve image generation, image detection, audio model and integrating these with robotic systems🤖 .</p>
+<p class="intro">Hello! I am KunHee Son, a fourth-year student at National Kongju University. I am interested in the field of Multi-Model. I particularly enjoy working on exciting projects that involve image generation, image detection, audio model and integrating these with robotic systems🤖 .</p>
 </section>
 
 <section id="research" class="content-section" aria-labelledby="research-title">

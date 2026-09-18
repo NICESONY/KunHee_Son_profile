@@ -18,7 +18,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="wrapper">
     <header class="profile-sidebar">
-      <a class="image avatar" href="#about" aria-label="About Kun-Hee Son"><img src="{{ site.avatar | relative_url }}" alt="Kun-Hee Son" width="160" height="160" fetchpriority="high"></a>
+      <a class="image avatar" href="#about" aria-label="About {{ site.title | escape }}"><img src="{{ site.avatar | relative_url }}" alt="{{ site.title | escape }}" width="160" height="160" fetchpriority="high"></a>
       <h1>{{ site.title | escape }}</h1>
       <p class="profile-department">{{ site.position | escape }}</p>
       <p class="profile-affiliation">{{ site.affiliation | escape }}</p>

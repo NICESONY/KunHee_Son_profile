@@ -1,4 +1,4 @@
-# Kun-Hee Son 개인 홈페이지
+# KunHee Son 개인 홈페이지
 
 [기존 Google Sites](https://sites.google.com/view/khson-profile-record)의 내용을 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 테마로 옮긴 홈페이지다. 원문의 영문 내용과 날짜를 유지했다.
 
