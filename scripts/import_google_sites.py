@@ -57,7 +57,7 @@ profile["unavailable_links"] = [item["url"] for item in json.loads(link_checks.r
 existing_path = ROOT / "_data/profile.json"
 if existing_path.is_file():
     existing = json.loads(existing_path.read_text(encoding="utf-8"))
-    for key in ["cv", "google_scholar", "name"]:
+    for key in ["cv", "google_scholar", "linkedin", "name"]:
         profile[key] = existing.get(key, profile.get(key, ""))
 profile["about"] = profile["about"].replace("Kun-Hee Son", profile["name"])
 (ROOT / "_data/profile.json").write_text(json.dumps(profile, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

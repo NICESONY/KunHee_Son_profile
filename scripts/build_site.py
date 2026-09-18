@@ -77,12 +77,13 @@ config.update({
     "email": profile["email"], "github_link": profile["github"], "avatar": "assets/img/profile.jpg",
     "cv_link": profile.get("cv", ""),
     "google_scholar": profile.get("google_scholar", ""),
+    "linkedin": profile.get("linkedin", ""),
     "description": f"{profile['name']} — Robotic manipulation, data collection systems, and sim-to-real at Kongju National University.",
     "keywords": f"{profile['name']}, Kongju National University, robotic manipulation, data collection systems, sim-to-real",
     "lang": "en", "enable_footnote": True, "auto_dark_mode": True, "font": "Serif", "baseurl": config.get("baseurl", ""),
     "exclude": ["Gemfile", "Gemfile.lock", "README.md", "README_de.md", "README_zh_Hans.md", "README_zh_Hant.md", "LICENSE", "html_source_file", "scripts", "requirements.txt"]
 })
-for key in ["google_analytics", "linkedin", "twitter", "favicon", "favicon_dark", "remote_theme"]:
+for key in ["google_analytics", "twitter", "favicon", "favicon_dark", "remote_theme"]:
     config.pop(key, None)
 if config.get("canonical") == "https://minimal-light-theme.yliu.me/":
     config.pop("canonical")
