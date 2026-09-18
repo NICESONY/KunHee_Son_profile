@@ -23,8 +23,8 @@ exclude:
 - scripts
 - requirements.txt
 lang: en
-baseurl: /minimal-light
+baseurl: /profile
 url: https://nicesony.github.io
-canonical: https://nicesony.github.io/minimal-light/
+canonical: https://nicesony.github.io/profile/
 cv_link: assets/files/CV_KunHeeSon_AILAB.pdf
 google_scholar: https://scholar.google.com/citations?user=L9IDiMgAAAAJ&hl=ko

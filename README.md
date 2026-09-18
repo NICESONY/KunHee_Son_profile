@@ -53,7 +53,9 @@ Google Sites의 CV, Hugging Face, Scholar, LinkedIn 및 일부 `link` 글자에�
 
 `html_source_file/` 전체가 정적 게시용 폴더다. `index.html`, `assets/`, `.nojekyll`, `LICENSE`를 함께 사용한다. 상위의 질문 기록이나 수집 자료는 게시용 폴더에 포함되지 않는다.
 
-공개 저장소는 [NICESONY/minimal-light](https://github.com/NICESONY/minimal-light)이며, 공식 테마를 fork해 사용한다. 공개 주소는 [https://nicesony.github.io/minimal-light/](https://nicesony.github.io/minimal-light/)다. `.github/workflows/pages.yml`은 `main`에 push할 때 데이터를 빌드하고 `html_source_file/`만 GitHub Pages에 배포한다.
+공개 저장소는 [NICESONY/profile](https://github.com/NICESONY/profile)이며, 공식 테마를 fork해 사용한다. 공개 주소는 [https://nicesony.github.io/profile/](https://nicesony.github.io/profile/)다. `.github/workflows/pages.yml`은 `main`에 push할 때 데이터를 빌드하고 `html_source_file/`만 GitHub Pages에 배포한다.
+
+GitHub Pages 프로젝트 주소의 마지막 경로는 저장소 이름을 따른다. 사용자의 요청으로 저장소 이름을 `minimal-light`에서 `profile`로 변경했다. 테마 이름과 로컬 작업 폴더 이름은 주소를 결정하지 않는다.
 
 프로필의 CV·Email·GitHub·Scholar와 본문의 외부 링크는 아이콘으로 표시한다. 툴팁과 접근성 이름으로 링크의 용도를 알 수 있다. 연구 키워드는 사용자의 수정 요청을 반영한 `Robotic Manipulation`, `Data Collection Systems`, `Sim-to-Real`이다.
 
