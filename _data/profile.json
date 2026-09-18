@@ -1,0 +1,246 @@
+{
+  "name": "Kun-Hee Son",
+  "department": "School of Artificial Intelligence",
+  "affiliation": "Kongju National University",
+  "email": "songunhee5426@gmail.com",
+  "github": "https://github.com/NICESONY",
+  "source_url": "https://sites.google.com/view/khson-profile-record",
+  "source_date": "2026-09-19",
+  "about": "Hello! I am Kun-Hee Son, a fourth-year student at National Kongju University. I am interested in the field of Multi-Model. I particularly enjoy working on exciting projects that involve image generation, image detection, audio model and integrating these with robotic systems🤖 .",
+  "research": {
+    "interests": [
+      "Robotic Manipulation",
+      "Data Collection Systems",
+      "Sim-to-Real"
+    ],
+    "recent": "Robotics, Self supervised learning, Data generation",
+    "previous": "Curriculum Learning and Image Classification, Reinforcement Learning",
+    "paper_label": "KIICE 2023",
+    "paper_url": "https://github.com/NICESONY/KIICE_2024_paper/"
+  },
+  "education": [
+    {
+      "institution": "Kongju National University",
+      "program": "Department of Artificial Intelligence",
+      "location": "Republic of Korea",
+      "dates": "2020. 3. 2. – Current",
+      "detail": "GPA: 4.15"
+    },
+    {
+      "institution": "University of Nevada, Las Vegas",
+      "program": "Experiential and Cultural Program",
+      "location": "USA",
+      "dates": "2024. 1. 1. – 2024. 1. 26.",
+      "detail": ""
+    }
+  ],
+  "publications": [
+    {
+      "text": "Performance Comparison according to the Priority Modes for Curriculum Learning in Image Classification",
+      "links": [
+        "https://github.com/NICESONY/KIICE_2024_paper/"
+      ]
+    },
+    {
+      "text": "Study on Adversarial AI Technology for the Protection of Autonomous Ships",
+      "links": []
+    },
+    {
+      "text": "Study on Enhancing Collision Avoidance Performance of Reinforcement Learning Agents for Autonomous Ships",
+      "links": []
+    }
+  ],
+  "robotics_projects": [
+    {
+      "text": "Smart Farm Autonomous Transport Robot and Charging Station Integration System (2025/07/21 ~ 2025/07/25)",
+      "links": [
+        "https://github.com/NICESONY/turtlebot3_project/"
+      ]
+    },
+    {
+      "text": "Pet Robot Creation Project with a Remote-Controlled Vehicle (2025/03/01 ~ 2025/08/31)",
+      "links": []
+    }
+  ],
+  "web_projects": [
+    {
+      "text": "Customized Video Content Creation Project Using Generative AI (August 21, 2024 – October 17, 2024 )",
+      "links": [
+        "https://github.com/NICESONY/KIICE_2024_paper/"
+      ]
+    },
+    {
+      "text": "Web Project for Coordinating Hospitals for Emergency Patients ( August 14, 2024 – August 17, 2024 )",
+      "links": [
+        "https://github.com/NICESONY/DSC_Car_hackathon"
+      ]
+    },
+    {
+      "text": "Record-Based Place Recommendation Web Project (July 29, 2024 – October 27, 2024)",
+      "links": [
+        "https://github.com/NICESONY/NICESONY/tree/main"
+      ]
+    },
+    {
+      "text": "Web Project for Promoting the Tourism Industry in Chungcheongnam-do (July 1, 2024 – August 5, 2024 )",
+      "links": [
+        "https://github.com/NICESONY/AWS_Tourism_Project"
+      ]
+    },
+    {
+      "text": "Web Project to Support Challenges Due to Doctors' Strike (March 1, 2024 – June 31, 2024)",
+      "links": []
+    }
+  ],
+  "awards": [
+    {
+      "text": "2024 Big Data/AI Hackathon , Grand Prize,",
+      "links": [
+        "https://github.com/NICESONY/2024_Big_Data_AI_Hackathon"
+      ]
+    },
+    {
+      "text": "2024 KNU Startup Competition, Excellence Award",
+      "links": []
+    },
+    {
+      "text": "2024 KNU Startup Competition, Special Award",
+      "links": []
+    },
+    {
+      "text": "2024 KNU Generative AI Utilization Content Competition, President's Award",
+      "links": [
+        "https://github.com/NICESONY/2024_kongju_Generative_Competition"
+      ]
+    },
+    {
+      "text": "2024 SW-Centered University Essay Contest, Best Award",
+      "links": [
+        "https://github.com/NICESONY/SW-essay-contest"
+      ]
+    },
+    {
+      "text": "2024 AWS Enterprise Linked Cloud Hackathon, Excellence Award",
+      "links": [
+        "https://github.com/NICESONY/DSC_Car_hackathon"
+      ]
+    },
+    {
+      "text": "2023 DSC Mobility Sector Idea Design Hackathon, Bronze Award",
+      "links": []
+    },
+    {
+      "text": "2023 Mobility Creative Science and Technology Competition, Electronic Times President Award",
+      "links": []
+    },
+    {
+      "text": "2023 DSCU Autonomous Driving Hackathon, Best Award",
+      "links": [
+        "https://www.cctoday.co.kr/news/articleView.html?idxno=2180876"
+      ]
+    },
+    {
+      "text": "2023 DSCU Autonomous Driving Competition, Grand Prize",
+      "links": [
+        "https://github.com/NICESONY/2023-DSCU-Self-Driving-Competition"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "text": "2025 NVIDIA DLI Deep Learning, Completed",
+      "links": []
+    },
+    {
+      "text": "2024 Australian training, Participation",
+      "links": []
+    },
+    {
+      "text": "2024 Las Vegas, United States, Consumer Electronics Show: CES, Participation",
+      "links": []
+    },
+    {
+      "text": "2024 University of Nevada, Las Vegas: UNLV, Study, Participation",
+      "links": []
+    },
+    {
+      "text": "2024 DATA CREATE CAMP, Participation",
+      "links": []
+    },
+    {
+      "text": "2024 AWS Cloud Development Training, Participation",
+      "links": []
+    },
+    {
+      "text": "2023 AWS DEEP RCCAR Training, Participation",
+      "links": []
+    },
+    {
+      "text": "2023 DATA CREATE CAMP, Participation",
+      "links": []
+    }
+  ],
+  "programming_skills": [
+    {
+      "text": "Python [Pytorch/Tensorflow]",
+      "links": []
+    },
+    {
+      "text": "C/C++",
+      "links": []
+    },
+    {
+      "text": "Robot Operating System (ROS1 and ROS2)",
+      "links": []
+    }
+  ],
+  "english_skills": [
+    {
+      "text": "Toeic speaking TEST : IM3(130) : 2025/10/19",
+      "links": []
+    },
+    {
+      "text": "TOEIC : 780(2026/05/31)",
+      "links": []
+    }
+  ],
+  "navigation": [
+    {
+      "id": "about",
+      "label": "About"
+    },
+    {
+      "id": "research",
+      "label": "Research"
+    },
+    {
+      "id": "education",
+      "label": "Education"
+    },
+    {
+      "id": "publications",
+      "label": "Publications"
+    },
+    {
+      "id": "projects",
+      "label": "Projects"
+    },
+    {
+      "id": "awards",
+      "label": "Awards"
+    },
+    {
+      "id": "activities",
+      "label": "Activities"
+    },
+    {
+      "id": "skills",
+      "label": "Skills"
+    }
+  ],
+  "unavailable_links": [
+    "https://github.com/NICESONY/KIICE_2024_paper/"
+  ],
+  "cv": "assets/files/CV_KunHeeSon_AILAB.pdf",
+  "google_scholar": "https://scholar.google.com/citations?user=L9IDiMgAAAAJ&hl=ko"
+}

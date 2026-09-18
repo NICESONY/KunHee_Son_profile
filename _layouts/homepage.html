@@ -1,123 +1,46 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <title>{{ site.title }} | {{site.affiliation}}</title>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
-    {% if site.keywords %}
-    <meta name="keywords" content="{{ site.keywords }}">
-    {% endif %}
-    {% if site.canonical %}
-    <link rel="canonical" href="{{ site.canonical }}"/>
-    {% endif %}
-
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
-    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
-
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    {% if site.font == "Sans Serif" %}
-    <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/font.css">
-    {% endif %}
-    {% if site.auto_dark_mode %}
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/publications.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
-    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
-    {% endif %}
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        
-        {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
-        {% endif %}
-
-        <h1>{{ site.title }}</h1>
-
-        {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
-        <br>
-        {% endif %}
-        {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
-        <br>
-        {% endif %}
-        {% if site.email %}
-        <email>{{ site.email }}</email>
-        {% endif %}
-
-        <br>
-        <br>
-        <div class="social-icons">
-        {% if site.google_scholar %}
-        <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
-          <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
-        </a>  
-        {% endif %}
-
-        {% if site.cv_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
-          <i class="ai ai-cv" style="font-size:1.3rem;"></i>
-        </a>
-        {% endif %}
-
-        {% if site.github_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
-          <i class="fab fa-github"></i>
-        </a>
-        {% endif %}
-
-        {% if site.linkedin %}
-        <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        {% endif %}
-
-        {% if site.twitter %}
-        <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        {% endif %}
-        </div>
-        <br>
-
-      </header>
-      <section>
-
+<html lang="{{ site.lang | escape }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{ site.title | escape }} | {{ site.affiliation | escape }}</title>
+  <meta name="description" content="{{ site.description | escape }}">
+  <meta name="keywords" content="{{ site.keywords | escape }}">
+  {% if site.canonical %}<link rel="canonical" href="{{ site.canonical | escape }}">{% endif %}
+  <link rel="icon" type="image/svg+xml" href="{{ 'assets/img/monogram.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/font.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/profile.css' | relative_url }}">
+  <script src="{{ 'assets/js/navigation.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="wrapper">
+    <header class="profile-sidebar">
+      <a class="image avatar" href="#about" aria-label="About Kun-Hee Son"><img src="{{ site.avatar | relative_url }}" alt="Kun-Hee Son" width="160" height="160" fetchpriority="high"></a>
+      <h1>{{ site.title | escape }}</h1>
+      <p class="profile-department">{{ site.position | escape }}</p>
+      <p class="profile-affiliation">{{ site.affiliation | escape }}</p>
+      <a class="email-link" href="mailto:{{ site.email | escape }}">{{ site.email | escape }}</a>
+      <div class="profile-links">
+        {% if site.cv_link %}<a href="{{ site.cv_link | relative_url }}" target="_blank" rel="noopener" title="CV (PDF)" aria-label="CV (PDF, opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg></a>{% endif %}
+        <a href="mailto:{{ site.email | escape }}" title="Email" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+        <a href="{{ site.github_link | escape }}" title="GitHub" aria-label="GitHub"><svg class="filled-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a>
+        {% if site.google_scholar %}<a href="{{ site.google_scholar | escape }}" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5zM6 11v6c4 3 8 3 12 0v-6M22 9v7"/></svg></a>{% endif %}
+      </div>
+      <nav class="page-navigation" aria-label="Page sections">
+        {% for item in site.data.profile.navigation %}<a href="#{{ item.id | escape }}">{{ item.label | escape }}</a>{% endfor %}
+      </nav>
+    </header>
+    <main id="main-content" class="main-content" tabindex="-1">
       {{ content }}
-
-      <br>
-
-      {% if site.enable_footnote %}
-      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
-      {% endif %}
-
-      </section>
-      <footer>
-        
+      <footer class="site-footer">
+        <span>© {{ site.title | escape }}</span>
+        <span><a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a> theme · <a href="{{ site.data.profile.source_url | escape }}">Google Sites</a></span>
+        <a class="back-to-top" href="#about">Back to top ↑</a>
       </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
-  </body>
+    </main>
+  </div>
+</body>
 </html>

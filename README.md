@@ -1,187 +1,66 @@
-# The Minimal Light Theme
+# Kun-Hee Son 개인 홈페이지
 
-[![LICENSE](https://img.shields.io/github/license/yaoyao-liu/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE)
+[기존 Google Sites](https://sites.google.com/view/khson-profile-record)의 내용을 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 테마로 옮긴 홈페이지다. 원문의 영문 내용과 날짜를 유지했다.
 
-\[[Demo the theme](https://minimal-light-theme.yliu.me/)\]  \[[简体中文](https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hans.md) | [繁體中文](https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hant.md) | [Deutsche](https://github.com/yaoyao-liu/minimal-light/blob/master/README_de.md)\]
- 
-*This is the source code of my homepage. I build this website based on [minimal](https://github.com/orderedlist/minimal).*
-<br>
-*Feel free to use and share the source code anywhere you like.*
+## 바로 보기
 
-An improved vision from [@Xiao-Chenguang](https://github.com/Xiao-Chenguang): [[link](https://github.com/Xiao-Chenguang/minimal-light)]
+`html_source_file/index.html`을 브라우저에서 열면 된다. 실행 환경 설치는 필요 없다. 글꼴은 Google Fonts를 사용하며, 인터넷 연결이 없으면 기본 serif 글꼴로 표시된다. 사진, 스타일, 메뉴 스크립트와 본문은 로컬 파일이다.
 
-**The latest version of my homepage is available here: <br><https://github.com/yaoyao-liu/yaoyaoliu-homepage>**
+HTTP로 확인하려면 이 폴더에서 실행한다.
 
-## Features
-
-- Simple and elegant personal homepage theme
-- Jekyll theme, automatically deployed by GitHub Pages
-- Basic search engine optimization
-- Mobile friendly
-- Supporting Markdown 
-- Supporting dark mode
-
-## Project Architecture
-
-```
-.
-├── _data                    
-|   └── publications.yml                      # the YAML file for publications
-├── _includes                    
-|   ├── publications.md                       # the Markdown file for publications
-|   └── services.md                           # the Markdown file for services
-├── _layouts                  
-|   └── homepage.html                         #  the html template for the homepage 
-├── _sass
-|   ├── minimal-light.scss                    #  this file will be compiled into a CSS file to control the style of the page              
-|   └── minimal-light-no-dark-mode.scss       #  this file is similar to minimal-light.scss with the dark mode disabled
-├── assets                                    #  some files
-├── html_source_file                          #  compiled HTML files
-├── .gitignore                                #  this file specifies intentionally untracked files that Git should ignore
-├── CNAME                                     #  the custom domain, will be used by GitHub page sevice
-├── Gemfile                                   #  a RubyGems related file
-├── LICENSE                                   #  the license file
-├── README.md                                 #  the readme file (English)
-├── README_de.md                              #  the readme file (German)
-├── README_zh_Hans.md                         #  the readme file (Simplified Chinese)
-├── README_zh_Hant.md                         #  the readme file (Traditional Chinese)
-├── _config.yml                               #  the Jekyll configuration file, including some options of the page  
-└── index.md                                  #  the content of the index page, using Markdown
+```powershell
+python -m http.server 8765 --bind 127.0.0.1 --directory html_source_file
 ```
 
-## Getting Started
+브라우저 주소: `http://127.0.0.1:8765/`
 
-This template can be used in the following two ways: 
-- **Using with the GitHub Pages Service.** GitHub will provide you with a server to generate and host web pages.
-- **Using locally with Jekyll.** You may install Jekyll on your own computer and generate static web pages (i.e., HTML files) with this template. After that, you may upload the HTML files to your server.
+## 내용 수정
 
-The detailed instructions are available below.
+`_data/profile.json`이 프로필과 모든 기록의 원본이다. 파일을 수정한 뒤 아래 명령을 실행한다.
 
-
-### Using with the GitHub Pages Service
-
-There are two ways to use this template on GitHub:
-
-#### Fork this repository
-- Fork this repository (or [use this repository as a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)) and change the name to `your-username.github.io`.
-
-- Enable the GitHub pages for that repository following the steps [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site).
-
-#### Using this repository as a remote theme
-To use this theme, add the following to your repository's `_config.yml`:
-
-```yaml
-remote_theme: yaoyao-liu/minimal-light
+```powershell
+python -m pip install -r requirements.txt
+python scripts/build_site.py
 ```
 
-Please note that adding the above line will directly apply all the default settings in this repository to yours.
+이 명령은 Jekyll용 `index.md`, `_config.yml`의 기본 프로필 값, 정적 HTML 버전인 `html_source_file/`을 갱신한다. `index.md`와 `html_source_file/index.html`은 생성 파일이므로 직접 편집하면 다음 빌드에서 덮어써진다.
 
-If you hope to edit any files (e.g., `index.md`), you still need to copy them to your repository.
+- 화면 구조: `_layouts/homepage.html`
+- 추가 스타일: `assets/css/profile.css`
+- 프로필 사진: `assets/img/profile.jpg`
+- CV: `assets/files/CV_KunHeeSon_AILAB.pdf`. 사용자가 지정한 GIST 이규빈 교수님 연구실 컨택용 원본을 복사했고, 프로필의 CV 버튼으로 새 탭에서 열린다.
+- Google Scholar: `_data/profile.json`의 `google_scholar`. 사용자가 제공한 `L9IDiMgAAAAJ` 프로필을 Scholar 버튼에 연결했다.
+- 원문에는 있지만 공개 접근이 되지 않는 주소: `_data/profile.json`의 `unavailable_links`. 이 목록의 주소는 원문 데이터에 보존되며 페이지에 링크로 출력되지 않는다.
 
-### Using Locally with Jekyll
+`scripts/import_google_sites.py`는 작업공간의 `source_material/` 스냅샷에서 최초 데이터를 가져오는 도구다. 사용자가 내용을 수정한 뒤 다시 실행하면 원문 스냅샷 내용으로 돌아가므로, 평소에는 `build_site.py`만 사용한다. 이 최초 이관 도구에는 별도로 `beautifulsoup4`가 필요하다.
 
-First, install [Ruby](https://www.ruby-lang.org/en/) and [Jekyll](https://jekyllrb.com/). The install instructions can be found here: <https://jekyllrb.com/docs/installation/#guides>
+## 구성
 
-Then, clone this repository:
+| 항목 | 이관 내용 |
+| --- | --- |
+| 프로필 | 사진, 이름, 소속, 이메일, GitHub, 자기소개 |
+| 연구 | 관심 분야, 최근·이전 연구 분야, 원문의 KIICE 표기 |
+| 학력 | 2건 |
+| 논문 | 3건 |
+| 프로젝트 | ROS 2건, Web 5건 |
+| 수상 | 10건 |
+| 대외활동 | 8건 |
+| 역량 | 프로그래밍 3건, 영어 시험 2건 |
 
-```bash
-git clone https://github.com/yaoyao-liu/minimal-light.git
-cd minimal-light
-```
-Install and run:
+Google Sites의 CV, Hugging Face, Scholar, LinkedIn 및 일부 `link` 글자에는 URL이 없었다. CV는 후속 요청에 따라 로컬에서 찾은 PDF로, Scholar는 사용자가 제공한 주소로 연결했다. 나머지 주소는 추측하지 않았다. 잘못된 날짜와 원문 링크에 관한 확인 사항은 작업공간의 `MIGRATION.md`에 기록했다.
 
-```bash
-bundle install
-bundle add webrick
-bundle exec jekyll server
-```
-View the live page using `localhost`:
-<http://localhost:4000>. You can get the HTML files in `_site` folder.
+## 게시용 파일
 
-### Using the HTML version
+`html_source_file/` 전체가 정적 게시용 폴더다. `index.html`, `assets/`, `.nojekyll`, `LICENSE`를 함께 사용한다. 상위의 질문 기록이나 수집 자료는 게시용 폴더에 포함되지 않는다.
 
-The compiled HTML files are available in the `html_source_file` folder. If you don't like Jekyll, you may directly edit and use the HTML version.
+공개 저장소는 [NICESONY/minimal-light](https://github.com/NICESONY/minimal-light)이며, 공식 테마를 fork해 사용한다. 공개 주소는 [https://nicesony.github.io/minimal-light/](https://nicesony.github.io/minimal-light/)다. `.github/workflows/pages.yml`은 `main`에 push할 때 데이터를 빌드하고 `html_source_file/`만 GitHub Pages에 배포한다.
 
-## Customizing
+프로필의 CV·Email·GitHub·Scholar와 본문의 외부 링크는 아이콘으로 표시한다. 툴팁과 접근성 이름으로 링크의 용도를 알 수 있다. 연구 키워드는 사용자의 수정 요청을 반영한 `Robotic Manipulation`, `Data Collection Systems`, `Sim-to-Real`이다.
 
-### Configuration variables
+루트에는 Jekyll 소스도 유지했다. Ruby/Bundler가 없는 현재 환경에서는 Jekyll 빌드를 실행하지 않았으며, 브라우저 검증은 생성된 정적 HTML을 기준으로 수행했다.
 
-The Minimal Light theme will respect the following variables, if set in your site's `_config.yml`:
+## 출처와 라이선스
 
-  ```yaml
-# Basic Information 
-title: Your Name
-position: Ph.D. Student
-affiliation: Your Affiliation
-email: yourname (at) example.edu
-
-# Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
-
-# Links 
-# If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/
-cv_link: assets/files/curriculum_vitae.pdf
-github_link: https://github.com/
-linkedin: https://www.linkedin.com/
-twitter: https://twitter.com/
-
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/avatar.png
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
-
-# Footnote
-# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
-enable_footnote: true
-
-# Auto Dark Mode
-# You may use the option to disable the automatic dark theme
-auto_dark_mode: true
-
-# Font
-# You can use this option to choose between Serif or Sans Serif fonts.
-font: "Serif" # or "Sans Serif"
-
-# Google Analytics ID
-# Please remove this if you don't use Google Analytics
-google_analytics: UA-111540567-4
-  ```
-### Edit `index.md`
-
-Create `index.md` and add your personal information. It supports **Markdown** and **HTML** syntax.
-
-### Edit included files
-
-There are two markdown files included in `index.md`. They are `_includes/publications.md` and `_includes/service.md`, respectively. These two files also support **Markdown** and **HTML** syntax. If you don't hope to include these two files, you may remove the following lines in `index.md`:
-https://github.com/yaoyao-liu/minimal-light/blob/b38070cd0b6bce45d8a885f3828549af8f82b7cb/index.md?plain=1#L21-L23
-
-If you hope to edit the publication list without changing the format, you may edit `_data/publications.yml`:
-https://github.com/yaoyao-liu/minimal-light/blob/77b1b3b31d4561091bcd739f37a2e1880e8b5ca5/_data/publications.yml#L3-L11
-
-
-### Stylesheet
-
-If you'd like to add your own custom styles, you may edit `_sass/minimal-light.scss`.
-
-### Layouts
-
-If you'd like to change the theme's HTML layout, you may edit `_layout/homepage.html`.
-
-## License
-
-This work is licensed under a [Creative Commons Zero v1.0 Universal](https://github.com/yaoyao-liu/minimal-light/blob/master/LICENSE) License.
-
-## Acknowledgements
-
-Our project uses the source code from the following repositories:
-
-* [pages-themes/minimal](https://github.com/pages-themes/minimal)
-
-* [orderedlist/minimal](https://github.com/orderedlist/minimal)
-
-* [al-folio](https://github.com/alshedivat/al-folio)
+- 내용: [Kun-Hee Son Google Sites](https://sites.google.com/view/khson-profile-record), 2026-09-19 수집.
+- 테마: [yaoyao-liu/minimal-light](https://github.com/yaoyao-liu/minimal-light), 기준 commit `1ea07f39518ac44644406380c83da6f89037c4fc`.
+- 원본 테마의 CC0 라이선스는 `LICENSE`에 보존했다. 개인 사진과 프로필 내용의 권리는 해당 권리자에게 있다.
