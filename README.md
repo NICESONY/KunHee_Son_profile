@@ -1,7 +1,5 @@
 # KunHee Son 개인 홈페이지
 
-[기존 Google Sites](https://sites.google.com/view/khson-profile-record)의 내용을 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 테마로 옮긴 홈페이지다. 원문의 영문 내용과 날짜를 유지했다.
-
 ## 바로 보기
 
 `html_source_file/index.html`을 브라우저에서 열면 된다. 실행 환경 설치는 필요 없다. 글꼴은 Google Fonts를 사용하며, 인터넷 연결이 없으면 기본 serif 글꼴로 표시된다. 사진, 스타일, 메뉴 스크립트와 본문은 로컬 파일이다.
